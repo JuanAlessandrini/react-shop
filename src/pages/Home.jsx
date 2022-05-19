@@ -1,11 +1,14 @@
 import React from 'react';
-import ProductList from '../containers/ProductList';
+import FullGradient from '../containers/FullGradient';
+import Login from './Login';
+import WelcomeMessage from '../components/WelcomeMessage';
 
 const Home = () => {
 	return (
-		<>
-			<ProductList />
-		</>
+		<FullGradient  >
+			<WelcomeMessage/>
+			<Login/>
+		</FullGradient>
 	);
 }
 

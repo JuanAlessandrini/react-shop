@@ -10,6 +10,9 @@
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	width: 300px;
+	background-color: rgba(white, 0.3);
+	padding: 100px 30px;
+	border-radius: 30px;
 }
 .logo {
 	width: 150px;

@@ -11,14 +11,16 @@ import CreateAccount from '../pages/CreateAccount';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
-import '../styles/global.css';
+import SearchPage from '../pages/SearchPage';
+import '@styles/global.css';
 
 const App = () => {
 	return (
-		<Layout>
+		
 			<BrowserRouter>
 				<Switch>
 					<Route exact path="/" component={Home} />
+					<Route exact path="/search" component={SearchPage} />
 					<Route exact path="/login" component={Login} />
 					<Route exact path="/password-recovery" component={PasswordRecovery} />
 					<Route exact path="/send-email" component={SendEmail} />
@@ -30,7 +32,7 @@ const App = () => {
 					<Route path="*" component={NotFound} />
 				</Switch>
 			</BrowserRouter>
-		</Layout>
+		
 	);
 }
 
