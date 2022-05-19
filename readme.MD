@@ -7,6 +7,9 @@ Simple project of shop using React.js
     
         npm install
     
-    3. Run the srcipt to build the app and open it in the browser
+    3. Run the script to build the app and open it in the browser
    
         npm run start
+
+
+
