@@ -5,8 +5,8 @@ Simple project of shop using React.js
     1. Clone the code
     2. Install dependencies:
     
-        npm install
+        <code>npm install</code>
     
     3. Run the srcipt to build the app and open it in the browser
    
-        npm run start
+        <code>npm run start</code>
