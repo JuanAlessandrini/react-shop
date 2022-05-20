@@ -19,6 +19,13 @@
 	position: relative;
 	transition: all 1s;
 }
+figure{
+	cursor: pointer;
+	transition: all 1s;
+}
+figure:hover{
+	color: dodgerblue;
+}
 
 .ProductItem>.contentImage>.overlay{
 	position:absolute;

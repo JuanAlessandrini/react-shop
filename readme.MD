@@ -1,7 +1,7 @@
 # React Shop
 Simple project of shop using React.js
 
-### Installation:
+## Installation:
     1. Clone the code
     2. Install dependencies:
     
@@ -10,6 +10,10 @@ Simple project of shop using React.js
     3. Run the script to build the app and open it in the browser
    
         npm run start
+
+## Images of the app
+
+![alt text](https://github.com/juanalessandrini/react-shop/blob/master/res/page1.png?raw=true)
 
 
 
