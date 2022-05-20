@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import '../styles/OrderItem.scss';
+import AppContext from '../context/AppContext';
+
+
 
 const OrderItem = ({product}) => {
-	const [cart, setCart] = useState('');
-
-	const handleClick = ()=>{
-		setCart('Anulado')
+	const { removeFromCart } = useContext(AppContext);
+	const [cart, setCart] = useState(product);
+	
+	const handleClick = (index)=>{
+		removeFromCart(index);
+		
 	}
+
 
 	return (
 		<div className="OrderItem">
@@ -15,8 +21,8 @@ const OrderItem = ({product}) => {
 			</figure>
 			<p>{product.title}</p>
 			<p>$ {product.price}</p>
-			<i onClick={handleClick} className='material-icons' alt="close">close</i>
-			{cart}
+			<i onClick={()=>{handleClick(product.id)}} className='material-icons' alt="close">close</i>
+			
 		</div>
 	);
 }
