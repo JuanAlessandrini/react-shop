@@ -5,6 +5,7 @@ import '../styles/Checkout.scss';
 import Header from '../components/Header';
 
 const Checkout = () => {
+	
 	return (
 		<div>
             <Header/>

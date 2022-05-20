@@ -8,15 +8,9 @@ const SearchPage = () => {
 	return (
         <div>
             <Header/>
-            <div className="ProductList">
-                
-                <div className="ProductList-container">
+            
+            <ProductList />
                     
-                    <div className="ProductList-content">
-                        <ProductList />
-                    </div>
-                </div>
-            </div>
         </div>
 	);
 }

@@ -2,14 +2,16 @@ import React from 'react';
 import '../styles/Menu.scss';
 
 const Menu = () => {
+	
+	
 	return (
 		<div className="Menu">
 			<ul>
 				<li>
-					<a href="/" className="title">My orders</a>
+					<a ><i className='material-icons'>cart</i>My orders</a>
 				</li>
 				<li>
-					<a href="/">My account</a>
+					<a href="/account">My account</a>
 				</li>
 				<li>
 					<a href="/">Sign out</a>

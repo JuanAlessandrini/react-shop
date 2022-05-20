@@ -1,7 +1,20 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import '../styles/Header.scss';
+import Menu from './Menu';
+import AppContext from '../context/AppContext';
+import MyOrder from '@containers/MyOrder';
+
+
 
 const Header = () => {
+	const [userToggle, setUserToggle] = useState(false);
+	const [orderToggle, setOrderToggle] = useState(false);
+	const { state } = useContext(AppContext);
+
+	const handleToggle = ()=>{
+		setUserToggle(!userToggle);
+	}
+
 	return (
 		<nav>
 			<img src="./icons/icon_menu.svg" alt="menu" className="menu" />
@@ -9,34 +22,42 @@ const Header = () => {
 				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
 				<ul>
 					<li>
-						<a href="/">All</a>
+						<a href="/search?All">All</a>
 					</li>
 					<li>
-						<a href="/">Clothes</a>
+						<a href="/search?Clothes">Clothes</a>
 					</li>
 					<li>
-						<a href="/">Electronics</a>
+						<a href="/search?Elec">Electronics</a>
 					</li>
 					<li>
-						<a href="/">Furnitures</a>
+						<a href="/search?Fur">Furnitures</a>
 					</li>
 					<li>
-						<a href="/">Toys</a>
+						<a href="/search?Toys">Toys</a>
 					</li>
 					<li>
-						<a href="/">Others</a>
+						<a href="/search?Other">Others</a>
 					</li>
 				</ul>
 			</div>
 			<div className="navbar-right">
 				<ul>
-					<a className='account_link' href="./account"><li className="navbar-email">nombre@dominio.com</li></a>
-					<li className="navbar-shopping-cart">
-					<a href="./checkout" ><i className="material-icons" alt="shopping cart" >shopping_cart</i></a>
-						<div>2</div>
+					<li className="navbar-email" onClick={handleToggle}>
+						nombre@dominio.com
+						
+					</li>
+					<li onClick={()=>{setOrderToggle(!orderToggle)}} className="navbar-shopping-cart">
+					
+						<i className="material-icons" alt="shopping cart" >shopping_cart</i>
+					
+					{state.cart.length > 0 ?( <div>{state.cart.length}</div>) : null}
 					</li>
 				</ul>
 			</div>
+			{userToggle && <Menu/>}
+			{orderToggle && <MyOrder/>}
+			
 		</nav>
 	);
 }
